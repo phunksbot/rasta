@@ -13,7 +13,7 @@ function formatAndSendTweet(event) {
 
     const formattedPrice = ethers.utils.formatEther(ethPrice.toString());
 
-    const tweetText = `${tokenName} bought for ${formattedPrice}${ethers.constants.EtherSymbol}. #NFT #NFTs`;
+    const tweetText = `${tokenName} bought for ${formattedPrice}${ethers.constants.EtherSymbol}. #NFT #NFTs #PunkBabies #PunkBaby #AltPunks`;
 
     return tweet.tweet(tweetText, image);
 }
