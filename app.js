@@ -13,7 +13,7 @@ function formatAndSendTweet(event) {
 
     const formattedPrice = ethers.utils.formatEther(ethPrice.toString());
 
-    const tweetText = `!BLIP ${tokenName} adopted for ${formattedPrice}${ethers.constants.EtherSymbol}        https://opensea.io/activity/punkbabies #NFT #NFTs #PunkBabies`;
+    const tweetText = `!BLIP | ${tokenName} got adopted for ${formattedPrice}${ethers.constants.EtherSymbol}          https://opensea.io/activity/punkbabies #NFT #NFTs #PunkBabies`;
 
     return tweet.tweet(tweetText, image);
 }
