@@ -10,8 +10,10 @@ function formatAndSendTweet(event) {
     const openseaLink = _.get(event, ['asset', 'permalink']);
     const totalPrice = _.get(event, 'total_price');
     const usdValue = _.get(event, ['payment_token', 'usd_price']);
+    
+    const formattedEthPrice = ethers.utils.formatEther(totalPrice.toString());
 
-    const tweetText = `!BLIP | ${tokenName} got adopted for ${formattedPrice}${ethers.constants.EtherSymbol}          #NFT #NFTs  #NFTcollectors #cryptopunks #punkbabies #nftart #NFTCommunity #NFTartist #altpunks`;
+    const tweetText = `!BLIP | ${tokenName} adopted for ${formattedEthPrice}Ξ ($${formattedEthPrice * usdValue}) ${openseaLink} #NFT #NFTs  #NFTcollectors #cryptopunks #punkbabies #nftart #NFTCommunity #NFTartist #altpunks`;
 
     console.log(tweetText);
 
