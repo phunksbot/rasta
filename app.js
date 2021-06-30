@@ -13,7 +13,7 @@ function formatAndSendTweet(event) {
     
     const formattedEthPrice = ethers.utils.formatEther(totalPrice.toString());
 
-    const tweetText = `!BLIP | ${tokenName} got adopted for ${formattedEthPrice}Ξ ($${formattedEthPrice * usdValue}) ${openseaLink} #NFT #NFTs #NFTcollectors #cryptopunks #PunkBabies #nftart #NFTCommunity #NFTartist #altpunks`;
+    const tweetText = `!BLIP | ${tokenName} got adopted for ${formattedEthPrice}Ξ ($${formattedEthPrice * usdValue}) \n ${openseaLink} \n #NFT #NFTs #CryptoPunks #PunkBabies #NFTCommunity #altpunks`;
 
     console.log(tweetText);
 
